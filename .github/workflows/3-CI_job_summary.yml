@@ -1,9 +1,10 @@
 name: 3-CI
 
 on:
+  #workflow_dispatch:
   push:
     paths:
-      - '3-**.yml'
+      - '**.yml'
 
 jobs:
   build:
