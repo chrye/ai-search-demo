@@ -1,9 +1,9 @@
-name: CI
+name: 2-CI
 
 on:
   push:
     paths:
-      - '**.yml'
+      - '2-**.yml'
 
 jobs:
   build:
