@@ -1,4 +1,4 @@
-name: 2-CI
+name: 2-CI-OutputParam_EnvVariable
 
 on:
   workflow_dispatch:
