@@ -1,4 +1,4 @@
-name: 2-CI-OutputParam_EnvVariable
+name: 2-CI
 
 on:
   push:
