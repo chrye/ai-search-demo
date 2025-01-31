@@ -1,4 +1,4 @@
-name: 2-CI
+name: 2-CI-OutputParam_EnvVariable
 
 on:
   push:
@@ -33,8 +33,5 @@ jobs:
       run: echo "MY_ENV_VAR=${{ steps.color-selector.outputs.SELECTED_COLOR }}" >> $GITHUB_ENV
 
     - name: Use environment variable 4
-      run: echo $MY_ENV_VAR
-
-    - name: Use environment variable 5
-      run: echo "The selected color is " $MY_ENV_VAR
+      run: echo "The selected color is:" $MY_ENV_VAR
       
