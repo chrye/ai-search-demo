@@ -1,4 +1,4 @@
-name: 3-CI
+name: 3-CI-JobSummary
 
 on:
   #workflow_dispatch:
