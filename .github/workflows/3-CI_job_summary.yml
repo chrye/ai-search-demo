@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line script
-      run: echo Let's Go!
+      run: echo "Let's Go!"
 
     ## Adding a job summary
     - name: Add job summary
