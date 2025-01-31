@@ -25,4 +25,9 @@ jobs:
       run: |
           SELECTED_COLOR=${{ steps.color-selector.outputs.SELECTED_COLOR }}
           echo "The selected color is $SELECTED_COLOR"
+
+    - name: Get color 3 - Assign output to environment variable, then Use environment variable
+      run: |
+        echo "SELECTED_COLOR=${{ steps.color-selector.outputs.SELECTED_COLOR }}" >> $GITHUB_ENV
+        echo "The environment variable is: $SELECTED_COLOR"
       
