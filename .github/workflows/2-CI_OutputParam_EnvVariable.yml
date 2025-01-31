@@ -33,7 +33,7 @@ jobs:
     - name: Get color 3
       run: echo "MY_ENV_VAR=${{ steps.color-selector.outputs.SELECTED_COLOR }}" >> $GITHUB_ENV
 
-    - name: Use environment variable
+    - name: Use environment variable 4
       run: echo $MY_ENV_VAR
 
       
