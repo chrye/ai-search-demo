@@ -7,15 +7,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
     - name: Run a one-line script
-      run: echo Hello, world!
+      run: echo Workflow starting...
 
     ## Setting an output parameter
     - name: Set color
       id: color-selector
       run: echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
+    
     - name: Get color
-        env:
-          SELECTED_COLOR: ${{ steps.color-selector.outputs.SELECTED_COLOR }}
-        run: echo "The selected color is $SELECTED_COLOR"
+    #    env:
+    #      SELECTED_COLOR: ${{ steps.color-selector.outputs.SELECTED_COLOR }}
+    #    run: echo "The selected color is $SELECTED_COLOR"
+      run: echo "The selected color is ${{ steps.color-selector.outputs.SELECTED_COLOR }}"
