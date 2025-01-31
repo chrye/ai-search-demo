@@ -3,8 +3,8 @@ name: 2-CI
 on:
   push:
     paths:
-      - '2-**.yml'
-
+      - '2*.*'
+      
 jobs:
   build:
     runs-on: ubuntu-latest
