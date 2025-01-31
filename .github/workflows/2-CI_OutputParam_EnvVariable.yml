@@ -1,9 +1,10 @@
 name: 2-CI
 
 on:
-  push:
-    paths:
-      - '2*.*'
+  workflow_dispatch:
+  #push:
+  #  paths:
+  #    - '2*.*'
       
 jobs:
   build:
