@@ -3,7 +3,7 @@ name: 2-CI-OutputParam_EnvVariable
 on:
   push:
     paths:
-      - '2-**.yml'
+      - '2-CI**.**'
 
 jobs:
   build:
