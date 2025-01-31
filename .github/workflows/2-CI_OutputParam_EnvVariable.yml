@@ -17,7 +17,7 @@ jobs:
       run: echo Workflow starting...
 
     ## Setting an output parameter
-    - name: Set color
+    - name: Set output parameter
       id: color-selector
       run: echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
     
@@ -29,9 +29,9 @@ jobs:
           SELECTED_COLOR=${{ steps.color-selector.outputs.SELECTED_COLOR }}
           echo "The selected color is $SELECTED_COLOR"
 
-    - name: Get color 3
+    - name: Set environment variable
       run: echo "MY_ENV_VAR=${{ steps.color-selector.outputs.SELECTED_COLOR }}" >> $GITHUB_ENV
 
-    - name: Use environment variable 4
+    - name: Get color 3
       run: echo "The selected color is:" $MY_ENV_VAR
       
