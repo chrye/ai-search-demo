@@ -1,10 +1,10 @@
 name: 3-CI-JobSummary
 
 on:
-  #workflow_dispatch:
-  push:
-    paths:
-      - '**.yml'
+  workflow_dispatch:
+  #push:
+  #  paths:
+  #    - '**.yml'
 
 jobs:
   build:
