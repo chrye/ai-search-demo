@@ -1,7 +1,5 @@
 const core = require('@actions/core');
 
-console.log('Hello World');
-
 async function run() {
     const summary = core.summary;
     summary.addRaw('<h1>My Job Summary</h1>');
@@ -12,4 +10,3 @@ async function run() {
 
 run();
 
-console.log('Hello World 2');

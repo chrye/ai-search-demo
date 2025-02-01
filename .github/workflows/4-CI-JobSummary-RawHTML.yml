@@ -26,5 +26,15 @@ jobs:
       run: |
         pwd; ls; 
         
-    - name: Write Job Summary
-      run: node write-summary.js        
+    - name: Write Raw HTML to Job Summary 1
+      run: node write-summary.js   
+      
+    - name: Set output parameter
+      id: set-output
+      run: echo "my_output=STATUS UPDATE This step completes successfully." >> $GITHUB_OUTPUT
+
+    - name: Write Raw HTML to Job Summary 2
+      run: |
+        echo "MY_ENV_VAR=${{ steps.set-output.outputs.my_output }}" >> $GITHUB_ENV
+        echo "<h1>Job Summary</h1>" >> $GITHUB_STEP_SUMMARY
+        echo "<p>The output is: $MY_ENV_VAR</p>" >> $GITHUB_STEP_SUMMARY
