@@ -1,10 +1,10 @@
 name: 4-CI-JobSummary-RawHTML
 
-on:
+on: [push]
   #workflow_dispatch:
-  push:
-    paths:
-      - '**.yml'
+  #push:
+  #  paths:
+  #    - '**.yml'
 
 jobs:
   build:
@@ -21,6 +21,10 @@ jobs:
 
     - name: Install dependencies
       run: npm install @actions/core
-      
+
+    - name: Check files
+      run: |
+        pwd; ls; 
+        
     - name: Write Job Summary
       run: node write-summary.js        
