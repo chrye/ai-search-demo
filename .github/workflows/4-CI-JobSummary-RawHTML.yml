@@ -47,7 +47,7 @@ jobs:
     - name: Write Raw HTML to Job Summary 2
       run: |
         echo "<h1>Job Summary</h1>" >> $GITHUB_STEP_SUMMARY
-        echo "<p>The output is: "$MY_ENV_VAR"</p>" >> $GITHUB_STEP_SUMMARY
+        echo "<p>The output is: "$MY_ENV_VAR1"</p>" >> $GITHUB_STEP_SUMMARY
         echo "<p>."</p>" >> $GITHUB_STEP_SUMMARY
         echo "<p>.."</p>" >> $GITHUB_STEP_SUMMARY
         echo "<p>..."</p>" >> $GITHUB_STEP_SUMMARY
