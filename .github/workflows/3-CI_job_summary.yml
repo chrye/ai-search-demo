@@ -12,10 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo "Let's Go!"
 
-    ## Adding a job summary
     - name: Add job summary
       run: |
         echo "{markdown content}" >> $GITHUB_STEP_SUMMARY
